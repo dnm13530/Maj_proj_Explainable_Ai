@@ -1,27 +1,8 @@
 # Self-Explaining Hybrid CNN-ViT Deepfake Detector
 
-A research prototype that detects AI-generated facial imagery (deepfakes) and explains *why* using native ViT self-attention weights — no Grad-CAM, no LIME. Evaluated under real-world image degradations (JPEG compression, blur, noise) via a Stress-Test Matrix and Forensic Trust Scorecard.
+A prototype that detects AI-generated facial imagery (deepfakes) and explains *why* using native ViT self-attention weights — no Grad-CAM, no LIME. Evaluated under real-world image degradations (JPEG compression, blur, noise) via a Stress-Test Matrix and Forensic Trust Scorecard.
 
 > Aligns with SDG 16: Peace, Justice, and Strong Institutions.
-
----
-
-## Project Status
-
-| Component | Status |
-|---|---|
-| CNN backbone | Done |
-| ViT + attention capture | Done |
-| Artifact-Attention Map generation | Done |
-| Degradation pipeline | Done |
-| IoU + SSIM evaluator | Done |
-| Stress-Test Matrix | Done |
-| Forensic Trust Scorecard | Done |
-| Training pipeline | Done |
-| Inference + reporting | Done |
-| Smoke tests (13/13) | Passing |
-| Real dataset training | Pending dataset access |
-| Results analysis + paper | In progress |
 
 ---
 
@@ -68,7 +49,7 @@ All 13 tests should pass.
 
 ---
 
-## What To Do After Getting the Dataset
+## To Do After Getting the Dataset
 
 ### Step 1 — Organize the dataset (Day 1)
 
@@ -148,26 +129,6 @@ This is where your team's research contribution lives. Work through these questi
 
 These answers become your **Results and Discussion** section in the paper.
 
----
-
-### Step 5 — Write the paper (Week 4–6)
-
-Suggested structure:
-
-| Section | Content |
-|---|---|
-| Abstract | Problem, method, key finding (e.g., "IoU drops 40% at JPEG quality 25 while accuracy drops only 15%") |
-| Introduction | Deepfake threat, black-box detector problem, our contribution |
-| Related Work | Post-hoc XAI (Grad-CAM, LIME), existing deepfake detectors, ViT attention analysis |
-| Methodology | CNN-ViT architecture, Artifact-Attention Map generation, Stress-Test Matrix, Forensic Trust Scorecard |
-| Experiments | Dataset, training setup, evaluation protocol |
-| Results | Stress-Test Matrix table, degradation curve figures, Forensic Trust Scores |
-| Discussion | Interpretation of findings, limitations, future work |
-| Conclusion | Summary tied back to SDG 16 |
-
-Target venues: CVPR/ICCV/ECCV workshops (XAI or media forensics tracks), IEEE Access, or MDPI Electronics.
-
----
 
 ## Running Inference on a New Image
 
@@ -188,16 +149,6 @@ python -m src.deepfake_detector.infer \
     --image_dir path/to/images/ \
     --output_dir outputs/inference
 ```
-
----
-
-## Team
-
-| Member | Responsibility |
-|---|---|
-| Person A | Dataset preparation, training runs, checkpoint management |
-| Person B | Stress-Test Matrix execution, results analysis, plots |
-| Person C | Paper writing, inference demos, presentation |
 
 ---
 
